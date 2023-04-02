@@ -54,6 +54,7 @@ public class AppConfig {
                 .requestMatchers("/students/delete/**").hasAuthority("ADMIN")
                 .requestMatchers("/students/edit/**").hasAuthority("ADMIN")
                 .requestMatchers("/students/").permitAll()
+                .requestMatchers("/account/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
