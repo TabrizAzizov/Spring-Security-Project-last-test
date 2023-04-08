@@ -15,16 +15,17 @@ public class UserDTO {
     private String username;
     private String password;
     private String role;
+
     public String checkProperties() throws IllegalAccessException {
-        for (Field f: getClass().getDeclaredFields()){
-            if (f.get(this)==null){
-                String [] arr=f.toString().split("\\.");
-                String t=arr[arr.length-1];
+        for (Field f : getClass().getDeclaredFields()) {
+            if (f.get(this) == null) {
+                String[] arr = f.toString().split("\\.");
+                String t = arr[arr.length - 1];
 
                 if (t.equalsIgnoreCase("username")
-                    || t.equalsIgnoreCase("password")
+                        || t.equalsIgnoreCase("password")
                         || t.equalsIgnoreCase("role")
-                        ){
+                ) {
                     return t;
                 }
             }

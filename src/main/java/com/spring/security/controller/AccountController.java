@@ -16,8 +16,9 @@ import java.security.Principal;
 public class AccountController {
     @Autowired
     private final UserService userService;
+
     @PostMapping("/register-account")
-    public ResponseEntity<BaseResponse> registerAccount(@RequestBody UserDTO userDTO){
+    public ResponseEntity<BaseResponse> registerAccount(@RequestBody UserDTO userDTO) {
         return ResponseEntity.ok(userService.registerAccount(userDTO));
     }
 }

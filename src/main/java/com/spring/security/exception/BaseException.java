@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseException extends RuntimeException{
+public class BaseException extends RuntimeException {
 
     private String code;
     private String message;

@@ -55,11 +55,9 @@ public class DataLoader implements CommandLineRunner {
         admin.setAccountNonLocked(true);
         admin.setEnabled(true);
         admin.setCredentialsNonExpired(true);
-        Set<Role>aroles=new HashSet<>();
+        Set<Role> aroles = new HashSet<>();
         aroles.add(adminRole);
         admin.setRoles(aroles);
-
-
 
 
         User user = new User();
@@ -70,10 +68,9 @@ public class DataLoader implements CommandLineRunner {
         user.setAccountNonLocked(true);
         user.setEnabled(true);
         user.setCredentialsNonExpired(true);
-        Set<Role>uroles=new HashSet<>();
+        Set<Role> uroles = new HashSet<>();
         uroles.add(userRole);
         user.setRoles(uroles);
-
 
 
         userRepository.save(admin);

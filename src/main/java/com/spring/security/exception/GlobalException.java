@@ -9,8 +9,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestControllerAdvice
 public class GlobalException extends ResponseEntityExceptionHandler {
     @ExceptionHandler(BaseException.class)
-    public ResponseEntity<BaseResponse> handleBaseException(BaseException e){
-        BaseResponse response=BaseResponse.builder()
+    public ResponseEntity<BaseResponse> handleBaseException(BaseException e) {
+        BaseResponse response = BaseResponse.builder()
                 .code(e.getCode())
                 .message(e.getLocalizedMessage())
                 .build();
